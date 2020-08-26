@@ -1,0 +1,75 @@
+.todolistForm {
+    display: flex;
+    margin-bottom: 30px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 400px) {
+    .todolistForm {
+        flex-direction: column;
+    }
+}
+.todolistForm_input {
+    background: white;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 21px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    border: none;
+    flex-grow: 1;
+}
+@media screen and (max-width: 740px) {
+    .todolistForm_input {
+        padding: 16px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .todolistForm_input {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .todolistForm_input {
+        font-size: 12px;
+    }
+}
+.todolistForm_submit {
+    background: white;
+    font-size: 24px;
+    padding: 21px;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    border: none;
+    margin-left: 10px;
+}
+@media screen and (max-width: 740px) {
+    .todolistForm_submit {
+        padding: 16px;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .todolistForm_submit {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .todolistForm_submit {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .todolistForm_submit {
+        margin: 10px auto 0 auto ;
+        width: 50%;
+    }
+}
+
