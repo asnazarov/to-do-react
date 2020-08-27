@@ -61,7 +61,6 @@
 }
 
 .todolistItem__text {
-    font-family: Inter;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
@@ -70,6 +69,7 @@
     padding-left: 2%;
     padding-right: 20%;
     text-align: center;
+    font-family: "Sourcesanpro", sans-serif;
 }
 
 @media screen and (max-width: 750px) {
@@ -88,6 +88,7 @@
     font-weight: 900;
     font-size: 24px;
     color: #61DAFB;
+    font-family: "Robotoslab", sans-serif;
 }
 
 @media screen and (max-width: 750px) {

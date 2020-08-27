@@ -14,7 +14,7 @@
     border-radius: 5px;
     font-size: 24px;
     padding: 21px;
-    font-family: 'Inter', sans-serif;
+    font-family: "Robotoslab", sans-serif;
     font-style: normal;
     font-weight: 900;
     border: none;
@@ -39,12 +39,13 @@
     }
 }
 .todolistForm_submit {
+
     background: white;
     font-size: 24px;
     padding: 21px;
     border-radius: 5px;
-    font-family: 'Inter', sans-serif;
     font-style: normal;
+    font-family: "Roboto", sans-serif;
     font-weight: 900;
     border: none;
     margin-left: 10px;
