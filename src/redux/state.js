@@ -58,11 +58,11 @@ const store = {
   },
 
 
-  //  deleteTask (index) {   // store
-  //   let arr = this.state
-  //   arr.splice(index, 1);
-  //   renderAllApp(this.state)
-  // },
+   deleteTask (index) {   // store
+    let arr = this.state
+    arr.splice(index, 1);
+    renderAllApp(this.state)
+  },
 
 
   // addTask(text) {
