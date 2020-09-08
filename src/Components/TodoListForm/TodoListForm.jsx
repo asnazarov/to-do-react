@@ -6,13 +6,13 @@ function TodoListForm(props) {
   const newTaskElement = React.createRef()
 
   const onAddTask = (event) => {
-    // event.preventDefault();
-    // const text = newTaskElement.current.value
-    // const obj = {
-    //   type: 'ADD_TASK',
-    //   newText: text
-    // }
-    // props.dispatch(obj,text)
+    event.preventDefault();
+    const text = newTaskElement.current.value
+    const obj = {
+      type: 'ADD_TASK',
+      newText: text
+    }
+    props.dispatch(obj,text)
 
   }
 

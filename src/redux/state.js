@@ -44,18 +44,18 @@ const store = {
   getState() {
     return this.state;
   },
-  // dispatch(action) {
-  //   if (action.type = 'ADD_TASK') {
-  //
-  //     const newTask = {
-  //       id: this.state[this.state.length - 1].id + 1,
-  //       name: action.newText,
-  //     }
-  //
-  //     this.state.push(newTask)
-  //     renderAllApp(this.state)
-  //   }
-  // },
+  dispatch(action) {
+    if (action.type = 'ADD_TASK') {
+
+      const newTask = {
+        id: this.state[this.state.length - 1].id + 1,
+        name: action.newText,
+      }
+
+      this.state.push(newTask)
+      renderAllApp(this.state)
+    }
+  },
 
 
   //  deleteTask (index) {   // store
