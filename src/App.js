@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 import s from './App.module.css';
-import TodoList from "./Components/TodoList/TodoList";
 import TodoListForm from "./Components/TodoListForm/TodoListForm";
 import TodoListItem from "./Components/TodoListItem/TodoListItem";
+import TodoListTitle from "./Components/TodoListTitle/TodoListTitle";
+
 
 function App(props) {
-
+  console.log(props.store.state)
   return (
     <div className={s.App}>
-      <TodoList />
-      <TodoListForm />
-      <TodoListItem text="Выравнивание текста по левому краю. В этом случае строки текста выравнивается по левому краю, а правый край располагается «лесенкой». Такой способ выравнивания является наиболее популярным" />
-      {/*<TodoListItem text="Выравнивание текста по левому краю. В этом случае строки" />*/}
-    <TodoListItem text="Ghbdtn" />
+      <TodoListTitle/>
+      <TodoListForm state={props.store.state}
+                    dispatch={props.store.dispatch}
+      />
+      <TodoListItem state={props.store.state}
+                    store={props.store}
+
+                    deleteTask={props.store.deleteTask} // в App.js
+      />
     </div>
   );
+
 }
 
 export default App;

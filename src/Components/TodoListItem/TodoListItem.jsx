@@ -1,26 +1,20 @@
 import React from 'react';
-import s from './todoListItem.module.css';
-import logo from "../../logo.svg";
+import List from "./List/List";
 
 
 function TodoListItem(props) {
-  const {text} = props;
-  const date = new Date();
-  const displayDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}   ${date.getHours()}:${date.getMinutes()}`
+
+  const taskElement = props.state.map((item, i) => <List
+    // deleteTask={props.deleteTask}  // далее в компонент таски
+    state={props.state}
+    message={item.name}
+    key={item.id}
+    index={i}  //передаем индекс в компонент таски
+  />)
   return (
-    <article className={s.todolistItem}>
-      <div>
-        <button className={s.todolistItem__copy}></button>
-        <button className={s.todolistItem__del}></button>
-      </div>
-      <div className={s.todolistItem__wrapper}>
-        <img className={s.todolistItem__logo} src={logo} alt=""/>
-        <span className={s.todolistItem__text}>{text}</span>
-
-      </div>
-      <span className={s.todolistItem__date}>{displayDate}</span>
-
-    </article>
+    <div>
+      {taskElement}
+    </div>
   );
 }
 
