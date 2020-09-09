@@ -1,5 +1,5 @@
-import axios from 'axios';
 import {renderAllApp} from "../index";
+import s from "../App.module.css";
 
 const store = {
 
@@ -51,19 +51,16 @@ const store = {
         id: this.state[this.state.length - 1].id + 1,
         name: action.newText,
       }
-
-      this.state.push(newTask)
-      renderAllApp(this.state)
+      this.state.push(newTask);
+      renderAllApp(this.state);
     }
   },
-
 
    deleteTask (index) {   // store
     let arr = this.state
     arr.splice(index, 1);
     renderAllApp(this.state)
   },
-
 
   // addTask(text) {
   //   const newTask = {

@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './todoListForm.module.css'
-import {renderAllApp} from "../../index";
 
 function TodoListForm(props) {
+  console.log(props)
   const newTaskElement = React.createRef()
 
   const onAddTask = (event) => {
@@ -13,13 +13,14 @@ function TodoListForm(props) {
       newText: text
     }
     props.dispatch(obj,text)
-
+    props.isClosePopup();
+    newTaskElement.current.value = "";
   }
 
   return (
     <div>
       <form className={s.todolistForm} onSubmit={onAddTask}>
-        <input type="text" className={s.todolistForm_input} ref={newTaskElement}/>
+        <input type="text" className={s.todolistForm_input} ref={newTaskElement} required/>
         <button  type="submit" className={s.todolistForm_submit}>Сохранить</button>
       </form>
     </div>

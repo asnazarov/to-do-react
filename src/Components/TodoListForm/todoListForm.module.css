@@ -1,7 +1,5 @@
 .todolistForm {
-    display: flex;
     margin-bottom: 30px;
-    max-width: 80%;
     margin: 0 auto;
 }
 @media screen and (max-width: 400px) {
@@ -17,7 +15,8 @@
     font-family: "Robotoslab", sans-serif;
     font-style: normal;
     font-weight: 900;
-    border: none;
+    border: 2px solid #262A35;
+    margin-bottom: 20px;
     flex-grow: 1;
 }
 @media screen and (max-width: 740px) {
@@ -47,8 +46,9 @@
     font-style: normal;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
-    border: none;
+    border: 2px solid #000;
     margin-left: 10px;
+    cursor: pointer;
 }
 @media screen and (max-width: 740px) {
     .todolistForm_submit {
