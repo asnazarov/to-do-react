@@ -2,7 +2,6 @@ import React from 'react';
 import s from './todoListForm.module.css'
 
 function TodoListForm(props) {
-  console.log(props)
   const newTaskElement = React.createRef()
 
   const onAddTask = (event) => {
@@ -12,7 +11,7 @@ function TodoListForm(props) {
       type: 'ADD_TASK',
       newText: text
     }
-    props.dispatch(obj,text)
+    props.dispatch(obj)
     props.isClosePopup();
     newTaskElement.current.value = "";
   }
